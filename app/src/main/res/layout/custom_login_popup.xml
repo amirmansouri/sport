@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/popup"
+    android:orientation="vertical">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <EditText
+            android:id="@+id/cm"
+            android:layout_width="390dp"
+            android:layout_height="44dp"
+            android:layout_marginTop="220dp"
+            android:ems="10"
+            android:hint="Indiquez votre taille (en cm)"
+            android:inputType="textEmailAddress"
+            app:layout_constraintBottom_toTopOf="@+id/kg"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.353"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/kg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Indiquez votre poids (en kg)"
+            android:inputType="textPassword"
+            tools:layout_editor_absoluteX="5dp"
+            tools:layout_editor_absoluteY="267dp"
+            tools:ignore="MissingConstraints" />
+
+        <RadioGroup
+            android:id="@+id/radioGroup1"
+            android:layout_width="154dp"
+            android:layout_height="118dp"
+            android:background="#024CAF50"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.062"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/kg"
+            app:layout_constraintVertical_bias="0.204">
+
+            <RadioButton
+                android:id="@+id/Masculin"
+                android:layout_width="93dp"
+                android:layout_height="wrap_content"
+                android:text="Masculin" />
+
+            <RadioButton
+                android:id="@+id/Feminin"
+                android:layout_width="93dp"
+                android:layout_height="wrap_content"
+                android:text="Féminin" />
+
+        </RadioGroup>
+
+        <RadioGroup
+            android:id="@+id/radioGroup2"
+            android:layout_width="228dp"
+            android:layout_height="115dp"
+            android:background="#024CAF50"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.977"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/kg"
+            app:layout_constraintVertical_bias="0.217">
+
+            <RadioButton
+                android:id="@+id/Gracile"
+                android:layout_width="197dp"
+                android:layout_height="35dp"
+                android:text="Gracile" />
+
+            <RadioButton
+                android:id="@+id/Normale"
+                android:layout_width="196dp"
+                android:layout_height="wrap_content"
+                android:text="Normale" />
+
+            <RadioButton
+                android:id="@+id/Large"
+                android:layout_width="196dp"
+                android:layout_height="wrap_content"
+                android:text="Large" />
+
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Indiquez votre sexe : "
+            app:layout_constraintBottom_toTopOf="@+id/radioGroup1"
+            app:layout_constraintEnd_toStartOf="@+id/textView2"
+            app:layout_constraintHorizontal_bias="0.13"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/kg"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Indiquez votre type de morphologie:"
+            app:layout_constraintBottom_toTopOf="@+id/radioGroup2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.909"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/kg"
+            app:layout_constraintVertical_bias="0.882" />
+
+        <Button
+            android:id="@+id/send"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="4dp"
+            android:text="S’inscrire"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.403"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/radioGroup2"
+            app:layout_constraintVertical_bias="0.853" />
+
+        <ScrollView
+            android:layout_width="405dp"
+            android:layout_height="133dp"
+            app:layout_constraintBottom_toTopOf="@+id/send"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/radioGroup1">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" />
+            <RadioGroup
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toTopOf="@+id/send"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/radioGroup1">
+
+                <ImageButton
+                    android:id="@+id/imageButton"
+                    android:layout_width="139dp"
+                    android:layout_height="151dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/gold"
+                    tools:srcCompat="@tools:sample/avatars" />
+
+                <RadioButton
+                    android:id="@+id/offer1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="" />
+
+                <ImageButton
+                    android:id="@+id/imageButton10"
+                    android:layout_width="131dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:src="@drawable/platinum"
+                    tools:srcCompat="@tools:sample/avatars" />
+
+                <RadioButton
+                    android:id="@+id/offer2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="" />
+
+            </RadioGroup>
+        </ScrollView>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </LinearLayout>
+
+
+
+

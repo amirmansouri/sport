@@ -1,0 +1,134 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/home"
+    tools:context="Fragment.HomeFragment">
+
+
+        <TextView
+            android:id="@+id/welcome"
+            android:layout_width="161dp"
+            android:layout_height="72dp"
+            android:text=""
+            android:textSize="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+
+            android:id="@+id/text"
+            android:layout_width="92dp"
+            android:layout_height="39dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="28dp"
+            android:text="Votre IMC :"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageSlider" />
+
+        <com.smarteist.autoimageslider.SliderView
+            android:id="@+id/imageSlider"
+            android:layout_width="363dp"
+            android:layout_height="162dp"
+            app:layout_constraintBottom_toTopOf="@+id/maigreur"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.27"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.669"
+            app:sliderAnimationDuration="600"
+            app:sliderAutoCycleDirection="back_and_forth"
+            app:sliderAutoCycleEnabled="true"
+            app:sliderIndicatorAnimationDuration="600"
+            app:sliderIndicatorGravity="center_horizontal|bottom"
+            app:sliderIndicatorOrientation="horizontal"
+            app:sliderIndicatorSelectedColor="#5A5A5A"
+            app:sliderIndicatorUnselectedColor="#FFF"
+            app:sliderScrollTimeInSec="1"
+            app:sliderStartAutoCycle="true">
+
+        </com.smarteist.autoimageslider.SliderView>
+
+        <TextView
+            android:id="@+id/ideal"
+            android:layout_width="105dp"
+            android:layout_height="39dp"
+
+
+            android:maxLength="5"
+            android:text="TextView"
+            app:layout_constraintBottom_toBottomOf="@+id/text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.241"
+            app:layout_constraintStart_toStartOf="@+id/text"
+            app:layout_constraintTop_toTopOf="@+id/text"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <ImageView
+            android:id="@+id/maigreur"
+            android:layout_width="206dp"
+            android:layout_height="277dp"
+            android:src="@drawable/maigreur"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toTopOf="@+id/resultat"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <ImageView
+            android:id="@+id/normal"
+            android:layout_width="207dp"
+            android:layout_height="292dp"
+            android:src="@drawable/normal"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toTopOf="@+id/resultat"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <ImageView
+            android:id="@+id/surpoid"
+            android:layout_width="207dp"
+            android:layout_height="311dp"
+            android:src="@drawable/surpoid"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toTopOf="@+id/resultat"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <ImageView
+            android:id="@+id/obesite"
+            android:layout_width="202dp"
+            android:layout_height="287dp"
+            android:src="@drawable/surpoid"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toTopOf="@+id/resultat"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/surpoid" />
+
+        <TextView
+
+            android:id="@+id/motivation"
+            android:layout_width="372dp"
+            android:layout_height="42dp"
+            android:backgroundTint="@color/black"
+            android:text=""
+            android:textColor="@color/white"
+            android:textSize="30dp"
+            app:layout_constraintBottom_toTopOf="@+id/imageSlider"
+            tools:layout_editor_absoluteX="4dp" />
+
+        <TextView
+            android:id="@+id/resultat"
+            android:layout_width="151dp"
+            android:layout_height="40dp"
+            android:layout_marginBottom="4dp"
+            android:text="TextView"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.6"
+            app:layout_constraintStart_toStartOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
