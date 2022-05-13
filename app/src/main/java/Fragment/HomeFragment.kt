@@ -87,7 +87,7 @@ class HomeFragment() : Fragment() {
         val user = auth.currentUser
         val userreference = databaseReference?.child(user?.uid!!)
         //profile_email.text = user?.email
-        userreference.addValueEventListener(object : ValueEventListener {
+        userreference?.addValueEventListener(object : ValueEventListener {
             override fun onDataChange(snapshot: DataSnapshot) {
                 welcome.text = snapshot.child("Name").value.toString()
                 val taille = snapshot.child("taille").value.toString()

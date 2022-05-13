@@ -1,16 +1,24 @@
 package Fragment
 
+import android.annotation.SuppressLint
+import android.graphics.Color
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.example.test_sport.R
+import android.widget.Toast
+import androidx.fragment.app.Fragment
+import com.example.test_sport.CustomLoginPopup2
+import com.example.test_sport.R.*
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.database.*
+import kotlinx.android.synthetic.main.custom_login_popup.*
+import kotlinx.android.synthetic.main.custom_login_popup.view.*
+import kotlinx.android.synthetic.main.fragment_home.view.*
+import kotlinx.android.synthetic.main.fragment_planing.*
+import kotlinx.android.synthetic.main.fragment_planing.view.*
+import kotlinx.android.synthetic.main.fragment_profile.*
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
 
 /**
  * A simple [Fragment] subclass.
@@ -18,43 +26,72 @@ private const val ARG_PARAM2 = "param2"
  * create an instance of this fragment.
  */
 class PlaningFragment : Fragment() {
-    // TODO: Rename and change types of parameters
-    private var param1: String? = null
-    private var param2: String? = null
+
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        arguments?.let {
-            param1 = it.getString(ARG_PARAM1)
-            param2 = it.getString(ARG_PARAM2)
-        }
+
     }
 
+    lateinit var auth: FirebaseAuth
+    private lateinit var databaseReference: DatabaseReference
+    lateinit var database: FirebaseDatabase
+
+
+    @SuppressLint("SetTextI18n")
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_planing, container, false)
+       val view =   inflater.inflate(layout.fragment_planing, container, false)
+//offer_disp.setBackgroundColor(Color.parseColor("#0CB60C"))
+        auth = FirebaseAuth.getInstance()
+        database = FirebaseDatabase.getInstance()
+        databaseReference = database.reference.child("user")
+loadProfile()
+
+//view.coach3.setOnClickListener {
+//
+//    dial()
+//}
+        return view
+
     }
 
-    companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment PlaningFragment.
-         */
-        // TODO: Rename and change types and number of parameters
-        @JvmStatic
-        fun newInstance(param1: String, param2: String) =
-            PlaningFragment().apply {
-                arguments = Bundle().apply {
-                    putString(ARG_PARAM1, param1)
-                    putString(ARG_PARAM2, param2)
-                }
+
+
+    private fun dial() {
+       val dialog = this.context?.let { CustomLoginPopup2(it, style.Theme_Dialog_Light) }
+        dialog?.setCancelable(true)
+        dialog?.setCanceledOnTouchOutside(true)
+        dialog?.window?.setBackgroundDrawableResource(android.R.color.transparent)
+    dialog?.show()
+    }
+    private fun loadProfile() {
+        val user = auth.currentUser
+        val userreference = databaseReference?.child(user?.uid!!)
+        //profile_email.text = user?.email
+        userreference.addValueEventListener(object : ValueEventListener {
+           override fun onDataChange(snapshot: DataSnapshot) {
+//                n.text = snapshot.child("votre offer").value.toString()
+//                if(n.text.equals("platinum")){
+//                    button3.setBackgroundColor(Color.parseColor("#D1D1D1"))
+//                    button4.setBackgroundColor(Color.parseColor("#888470"))
+//                    b.setBackgroundColor(Color.parseColor("#737271"))
+//                    scroll.setBackgroundColor(Color.parseColor("#E5E4E2"))
+//                    Toast.makeText(this@PlaningFragment.context, "platinum offre ", Toast.LENGTH_LONG).show()
+//                }else{
+//
+//                        Toast.makeText(this@PlaningFragment.context, "test test ", Toast.LENGTH_LONG).show()
+//                }
+
             }
+
+            override fun onCancelled(error: DatabaseError) {
+                TODO("Not yet implemented")
+            }
+        })
     }
 }

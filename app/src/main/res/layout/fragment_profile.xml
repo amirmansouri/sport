@@ -33,9 +33,8 @@
                 android:background="@drawable/circle"
                 android:padding="3dp"
                 android:scaleType="centerInside"
-                android:src="@drawable/article3"
-                android:visibility="visible"
-                />
+
+                android:visibility="visible" />
 
         </RelativeLayout>
 

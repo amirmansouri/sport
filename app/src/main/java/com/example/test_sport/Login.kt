@@ -25,6 +25,8 @@ class Login : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
         supportActionBar?.hide()
+
+
         val imageSlider = findViewById<SliderView>(R.id.imageSlider)
         val imageList: ArrayList<String> = ArrayList()
         imageList.add("https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__340.jpg")

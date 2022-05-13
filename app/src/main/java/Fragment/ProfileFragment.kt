@@ -61,11 +61,12 @@ showHide(view)
     fun showHide(view:View) {
         view.photo_profile.visibility= View.VISIBLE
     }
+
     private fun loadProfile() {
         val user = auth.currentUser
         val userreference = databaseReference?.child(user?.uid!!)
         //profile_email.text = user?.email
-        userreference.addValueEventListener(object : ValueEventListener {
+        userreference?.addValueEventListener(object : ValueEventListener {
             override fun onDataChange(snapshot: DataSnapshot) {
                 profile_name.text = snapshot.child("Name").value.toString()
                 profile_email.text = snapshot.child("Email").value.toString()

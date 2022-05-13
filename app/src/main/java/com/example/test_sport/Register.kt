@@ -20,7 +20,7 @@ class Register : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-       setContentView(R.layout.activity_register)
+        setContentView(R.layout.activity_register)
         supportActionBar?.hide()
         val dialog = CustomLoginPopup(this, R.style.Theme_Dialog_Light)
         dialog.setCancelable(true)
@@ -31,30 +31,17 @@ class Register : AppCompatActivity() {
         val buttonShow = findViewById<Button>(R.id.register_compte)
 
         buttonShow.setOnClickListener {
-            //dialog.show()
-            val intent = Intent(this,reg2::class.java)
-intent.putExtra("EmailRegister",EmailRegister.text.toString())
-            intent.putExtra("Name",Name.text.toString())
-            intent.putExtra("Phone",Phone.text.toString())
-            intent.putExtra("PasswordRegister",PasswordRegister.text.toString())
+            //  dialog.show()
+            val intent = Intent(this, reg2::class.java)
+            intent.putExtra("EmailRegister", EmailRegister.text.toString())
+            intent.putExtra("Name", Name.text.toString())
+            intent.putExtra("Phone", Phone.text.toString())
+            intent.putExtra("PasswordRegister", PasswordRegister.text.toString())
             startActivity(intent)
         }
 
 
-//        register_compte.setOnClickListener {
-//            if (checking()) {
-//                register()
-//            } else {
-//            //    val email_vide = getString(R.string.email_registere_vide)
-//                EmailRegister.error = "email_vide"
-//             //   val phone_vide = getString(R.string.phone_vide)
-//                Phone.error = "phone_vide"
-//              //  val name_vide = getString(R.string.name_vide)
-//                Name.error = "name_vide"
-//               // val pass_vide = getString(R.string.pass_vide)
-//                PasswordRegister.error = "pass_vide"
-//            }
-//        }
+
     }
 
     private fun checking(): Boolean {
@@ -84,7 +71,7 @@ intent.putExtra("EmailRegister",EmailRegister.text.toString())
                         child("email").setValue(EmailRegister.text.toString())
                         child("name").setValue(Name.text.toString())
                         child("phone").setValue(Phone.text.toString())
-                      //  child("taille").setValue(cm.text.toString())
+                        //  child("taille").setValue(cm.text.toString())
                     }
 
                     Toast.makeText(this, "Registration Success. ", Toast.LENGTH_LONG).show()
