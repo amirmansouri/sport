@@ -2,12 +2,20 @@
 <menu xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <item android:title="HOME"
-        android:id="@+id/homeFragment"/>
+    <item
+        android:title="HOME"
+        android:id="@+id/homeFragment"
+        android:icon="@drawable/ic_baseline_home_24"/>
     <item android:title="PLANING"
-        android:id="@+id/planingFragment"/>
+        android:id="@+id/planingFragment"
+        android:icon="@drawable/ic_baseline_calendar_24"/>
+    />
     <item android:title="ARTICLE"
-        android:id="@+id/articleFragment"/>
+        android:id="@+id/articleFragment"
+        android:icon="@drawable/ic_baseline_article_24"/>
+    />
     <item android:title="PROFILE"
-        android:id="@+id/profileFragment"/>
+        android:id="@+id/profileFragment"
+        android:icon="@drawable/ic_baseline_person_24"/>
+    />
 </menu>
