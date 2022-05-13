@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/popup"
+    android:orientation="vertical"
+    tools:context=".reg2">
+
+
+    <EditText
+        android:id="@+id/cm"
+        android:layout_width="300dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="220dp"
+        android:ems="10"
+        android:hint="Indiquez votre taille (en cm)"
+        android:inputType="textEmailAddress"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+
+    <EditText
+        android:id="@+id/kg"
+        android:layout_width="317dp"
+        android:layout_height="45dp"
+        android:ems="10"
+        android:hint="Indiquez votre poids (en kg)"
+        android:inputType="textPassword"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.595"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cm"
+        app:layout_constraintVertical_bias="0.041"
+        tools:ignore="MissingConstraints" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup1"
+        android:layout_width="154dp"
+        android:layout_height="118dp"
+        android:background="#024CAF50"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.062"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/kg"
+        app:layout_constraintVertical_bias="0.204">
+
+        <RadioButton
+            android:id="@+id/Masculin"
+            android:layout_width="93dp"
+            android:layout_height="wrap_content"
+            android:text="Masculin" />
+
+        <RadioButton
+            android:id="@+id/Feminin"
+            android:layout_width="93dp"
+            android:layout_height="wrap_content"
+            android:text="Féminin" />
+
+    </RadioGroup>
+
+    <RadioGroup
+        android:id="@+id/radioGroup2"
+        android:layout_width="228dp"
+        android:layout_height="115dp"
+        android:background="#024CAF50"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.977"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/kg"
+        app:layout_constraintVertical_bias="0.217">
+
+        <RadioButton
+            android:id="@+id/Gracile"
+            android:layout_width="197dp"
+            android:layout_height="35dp"
+            android:text="Gracile" />
+
+        <RadioButton
+            android:id="@+id/Normale"
+            android:layout_width="196dp"
+            android:layout_height="wrap_content"
+            android:text="Normale" />
+
+        <RadioButton
+            android:id="@+id/Large"
+            android:layout_width="196dp"
+            android:layout_height="wrap_content"
+            android:text="Large" />
+
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Indiquez votre sexe : "
+        app:layout_constraintBottom_toTopOf="@+id/radioGroup1"
+        app:layout_constraintEnd_toStartOf="@+id/textView2"
+        app:layout_constraintHorizontal_bias="0.13"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/kg"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Indiquez votre type de morphologie:"
+        app:layout_constraintBottom_toTopOf="@+id/radioGroup2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.909"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/kg"
+        app:layout_constraintVertical_bias="0.882" />
+
+    <Button
+        android:id="@+id/send"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="4dp"
+        android:text="S’inscrire"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.403"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup2"
+        app:layout_constraintVertical_bias="0.853" />
+
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+    </LinearLayout>
+
+    <RadioGroup
+        android:id="@+id/radioGroup3"
+        android:layout_width="364dp"
+        android:layout_height="157dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/send"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup1">
+
+        <ImageButton
+            android:layout_width="115dp"
+            android:layout_height="136dp"
+            android:layout_gravity="center"
+            android:scaleType="centerCrop"
+            android:src="@drawable/gold2"
+           />
+
+        <RadioButton
+            android:id="@+id/offer1"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="" />
+
+        <ImageButton
+
+            android:layout_width="115dp"
+            android:layout_height="136dp"
+           android:layout_gravity="center"
+            android:scaleType="centerCrop"
+            android:src="@drawable/platinum2"
+             />
+
+        <RadioButton
+            android:id="@+id/offer2"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="" />
+
+    </RadioGroup>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
