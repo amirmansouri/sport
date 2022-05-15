@@ -6,9 +6,11 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
+import com.example.test_sport.Login
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
+import kotlinx.android.synthetic.main.activity_login.*
 import kotlinx.android.synthetic.main.activity_register.*
 import kotlinx.android.synthetic.main.custom_login_popup.*
 
@@ -29,7 +31,10 @@ class Register : AppCompatActivity() {
 
 
         val buttonShow = findViewById<Button>(R.id.register_compte)
-
+back_login.setOnClickListener{
+    val intent = Intent(this@Register,Login::class.java)
+    startActivity(intent)
+}
         buttonShow.setOnClickListener {
             //  dialog.show()
             val intent = Intent(this, reg2::class.java)

@@ -7,6 +7,7 @@ import android.content.res.Configuration
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.TextUtils
+import android.widget.EditText
 import android.widget.ImageView
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
@@ -15,6 +16,7 @@ import com.google.firebase.auth.FirebaseAuth
 import com.smarteist.autoimageslider.SliderView
 import kotlinx.android.synthetic.main.activity_login.*
 import kotlinx.android.synthetic.main.activity_register.*
+import kotlinx.android.synthetic.main.custom_view_register.*
 
 import java.util.*
 
@@ -26,14 +28,47 @@ class Login : AppCompatActivity() {
         setContentView(R.layout.activity_login)
         supportActionBar?.hide()
 
+//
+//        val imageSlider = findViewById<SliderView>(R.id.imageSlider)
+//        val imageList: ArrayList<String> = ArrayList()
+//        imageList.add("https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__340.jpg")
+//        imageList.add("https://images.ctfassets.net/hrltx12pl8hq/4plHDVeTkWuFMihxQnzBSb/aea2f06d675c3d710d095306e377382f/shutterstock_554314555_copy.jpg")
+//        imageList.add("https://media.istockphoto.com/photos/child-hands-formig-heart-shape-picture-id951945718?k=6&m=951945718&s=612x612&w=0&h=ih-N7RytxrTfhDyvyTQCA5q5xKoJToKSYgdsJ_mHrv0=")
+//        setImageInSlider(imageList, imageSlider)
+nouveau_abonne.setOnClickListener {
+//    val intent = Intent(this@Login,Register::class.java)
+//    startActivity(intent)
+    val inflater = layoutInflater
+    val inflate_view = inflater.inflate(R.layout.custom_view_register,null)
+    val username = inflate_view.findViewById<EditText>(R.id.name_admin)
+    val password = inflate_view.findViewById<EditText>(R.id.password_admin)
+    val alertDialog = AlertDialog.Builder(this)
+    alertDialog.setTitle("Admin NETVOR")
+    alertDialog.setView(inflate_view)
+    alertDialog.setCancelable(false)
+    alertDialog.setNegativeButton("cancel"){
+            _, _ ->
+       // Toast.makeText(this,"jklm",Toast.LENGTH_LONG).show()
 
-        val imageSlider = findViewById<SliderView>(R.id.imageSlider)
-        val imageList: ArrayList<String> = ArrayList()
-        imageList.add("https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__340.jpg")
-        imageList.add("https://images.ctfassets.net/hrltx12pl8hq/4plHDVeTkWuFMihxQnzBSb/aea2f06d675c3d710d095306e377382f/shutterstock_554314555_copy.jpg")
-        imageList.add("https://media.istockphoto.com/photos/child-hands-formig-heart-shape-picture-id951945718?k=6&m=951945718&s=612x612&w=0&h=ih-N7RytxrTfhDyvyTQCA5q5xKoJToKSYgdsJ_mHrv0=")
-        setImageInSlider(imageList, imageSlider)
+    }
+    alertDialog.setPositiveButton("done"){_,_ ->
 
+        val username = username.text.toString()
+        val password = password.text.toString()
+       //
+        if(username.equals("amir") && password.equals("amir") ){
+            val intent = Intent(this@Login,Register::class.java)
+            startActivity(intent)
+        }else{
+            Toast.makeText(this@Login, "try again", Toast.LENGTH_LONG).show()
+        }
+
+    }
+    val dialog = alertDialog.create()
+    dialog.show()
+
+
+}
 
         Login.setOnClickListener {
             if (checking()) {

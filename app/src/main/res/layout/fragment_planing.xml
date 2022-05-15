@@ -4,12 +4,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
+
     tools:context="Fragment.PlaningFragment">
 
 
     <ScrollView
-        android:layout_width="349dp"
-        android:layout_height="501dp"
+        android:id="@+id/scroll"
+        android:layout_width="366dp"
+        android:layout_height="446dp"
         android:background="@color/gold"
         android:fillViewport="true"
         android:orientation="vertical"
@@ -31,8 +34,10 @@
                 android:orientation="vertical">
 
                 <LinearLayout
+                    android:id="@+id/lundi"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:background="@color/gold2"
                     android:orientation="vertical">
 
                     <TextView
@@ -51,11 +56,10 @@
                 </LinearLayout>
 
                 <LinearLayout
-                    android:id="@+id/button4"
-                    android:layout_width="wrap_content"
+                    android:id="@+id/jeudi"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:backgroundTint="@color/gold3"
-                    >
+                    android:background="@color/gold3">
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -73,13 +77,13 @@
                     android:background="@color/white" />
 
                 <LinearLayout
-                    android:id="@+id/b"
+                    android:id="@+id/dimanche"
                     android:layout_width="wrap_content"
                     android:layout_height="199dp"
                     android:background="@color/gold4">
 
                     <TextView
-                        android:layout_width="match_parent"
+                        android:layout_width="82dp"
                         android:layout_height="match_parent"
                         android:gravity="center"
                         android:rotation="-90"
@@ -477,6 +481,7 @@
                             android:textSize="15dp" />
 
 
+
                     </LinearLayout>
                 </LinearLayout>
 
@@ -555,6 +560,46 @@
         </LinearLayout>
     </ScrollView>
 
+    <TextView
+        android:id="@+id/n"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="9dp"
+        tools:ignore="MissingConstraints" />
 
+    <TextView
+        android:id="@+id/Reservation"
+        android:layout_width="79dp"
+        android:layout_height="25dp"
+        android:layout_marginBottom="14dp"
+        android:textColor="@color/colorPrimaryDark"
+        android:text="Resérvation"
+        app:layout_constraintBottom_toTopOf="@+id/scroll"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.864"
+        app:layout_constraintStart_toEndOf="@+id/n"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <ImageView
+        android:id="@+id/platinum_offre"
+        android:layout_width="200dp"
+        android:layout_height="140dp"
+        android:src="@drawable/platinum_offre_back"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/scroll" />
+    <ImageView
+        android:id="@+id/gold_offre"
+        android:layout_width="200dp"
+        android:layout_height="140dp"
+        android:src="@drawable/gold_offre_back"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/scroll" />
 </androidx.constraintlayout.widget.ConstraintLayout>
 

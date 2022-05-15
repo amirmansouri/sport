@@ -11,9 +11,17 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Test_sport">
         <activity
+            android:name=".splash.splash3"
+            android:exported="false" />
+        <activity
+            android:name=".splash.splash2"
+            android:exported="false" />
+        <activity
+            android:name=".splash.splash1"
+            android:exported="false" />
+        <activity
             android:name=".reg2"
             android:exported="false" />
-
         <activity
             android:name=".Register"
             android:exported="false" />

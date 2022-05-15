@@ -7,6 +7,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import com.example.test_sport.R
 import kotlinx.android.synthetic.main.fragment_article.view.*
@@ -31,6 +32,7 @@ class ArticleFragment : Fragment() {
     view.article2.setOnClickListener {
 lienarticle2()
     }
+        (activity as AppCompatActivity?)!!.supportActionBar!!.hide()
         return view
     }
 

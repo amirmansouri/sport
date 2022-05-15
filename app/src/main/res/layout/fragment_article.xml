@@ -59,7 +59,8 @@
             <ImageButton
                 android:id="@+id/imageButton3"
                 android:layout_width="418dp"
-                android:layout_height="125dp" />
+                android:layout_height="125dp"
+                android:background="@drawable/article3"/>
 
             <View
                 android:id="@+id/divider4"
@@ -70,7 +71,8 @@
             <ImageButton
                 android:id="@+id/imageButton4"
                 android:layout_width="match_parent"
-                android:layout_height="133dp" />
+                android:layout_height="133dp"
+                android:background="@drawable/article4"/>
 
             <View
                 android:id="@+id/divider5"
@@ -81,17 +83,13 @@
             <ImageButton
                 android:id="@+id/imageButton5"
                 android:layout_width="match_parent"
-                android:layout_height="133dp" />
-
-            <ImageButton
-                android:id="@+id/imageButton6"
-                android:layout_width="match_parent"
-                android:layout_height="133dp" />
-
+                android:layout_height="133dp"
+                android:background="@drawable/article5"/>
             <ImageButton
                 android:id="@+id/imageButton7"
                 android:layout_width="match_parent"
-                android:layout_height="133dp" />
+                android:layout_height="133dp"
+                android:background="@drawable/article7"/>
 
         </LinearLayout>
     </ScrollView>

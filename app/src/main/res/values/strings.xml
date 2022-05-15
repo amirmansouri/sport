@@ -6,5 +6,7 @@
     <string name="Phone" translatable="true">Phone</string>
     <string name="Email" translatable="true">Email</string>
     <string name="motivation1">« Si tu veux courir, cours un kilomètre. Si tu veux changer ta vie, cours un marathon. »</string>
-   <string name="motivation2">« Le sport va chercher la peur pour la dominer, la fatigue pour en triompher, la difficulté pour la vaincre. »</string>
+    <string name="motivation2">« Le sport va chercher la peur pour la dominer, la fatigue pour en triompher, la difficulté pour la vaincre. »</string>
+    <string name="login_email_hint">Email</string>
+    <string name="login_password_hint">Password</string>
 </resources>
