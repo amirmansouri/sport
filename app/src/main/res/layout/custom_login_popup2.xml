@@ -14,6 +14,7 @@
             android:id="@+id/coach_image"
             android:layout_width="70dp"
             android:layout_height="70dp"
+            android:src="@drawable/logo4"
             android:layout_marginTop="51dp"
             android:layout_marginLeft="110dp"/>
     </LinearLayout>
@@ -32,7 +33,7 @@
             android:layout_height="wrap_content"
             android:drawableEnd="@drawable/email_24"
             android:gravity="center"
-            android:text="al:;kt,jhngdh.com"
+            android:text="chiheb hasni"
             android:textColor="@color/white"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -49,6 +50,7 @@
             android:layout_height="wrap_content"
             android:drawableEnd="@drawable/location_on_24"
             android:gravity="center"
+            android:text="monastir"
             android:textColor="@color/white"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -56,7 +58,14 @@
             app:layout_constraintStart_toEndOf="@+id/imageView"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.704" />
-
+<TextView
+    android:layout_width="290dp"
+    android:layout_height="wrap_content"
+    android:drawableEnd="@drawable/phone_24"
+    android:text="97704289"
+    android:textColor="@color/white"
+   android:gravity="center"
+  />
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

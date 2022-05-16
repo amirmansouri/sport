@@ -66,7 +66,7 @@ showHide(view)
         val user = auth.currentUser
         val userreference = databaseReference?.child(user?.uid!!)
         //profile_email.text = user?.email
-        userreference?.addValueEventListener(object : ValueEventListener {
+        userreference.addValueEventListener(object : ValueEventListener {
             override fun onDataChange(snapshot: DataSnapshot) {
                 profile_name.text = snapshot.child("Name").value.toString()
                 profile_email.text = snapshot.child("Email").value.toString()

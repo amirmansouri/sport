@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
+    android:background="@drawable/blue_bg"
 
     tools:context="Fragment.PlaningFragment">
 
@@ -151,8 +151,8 @@
 
 
                         <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="33dp"
+                            android:layout_width="183dp"
+                            android:layout_height="46dp"
                             android:gravity="center"
                             android:text="Cardio Musculation"
                             android:textColor="@color/white"
@@ -161,19 +161,11 @@
                         <TextView
                             android:id="@+id/coach1"
                             android:layout_width="match_parent"
-                            android:layout_height="33dp"
-                            android:gravity="bottom|center"
+                            android:layout_height="55dp"
+                            android:gravity="center|bottom"
                             android:text="ahmed ben ahmed"
                             android:textColor="@color/colorPrimary"
                             android:textSize="15dp" />
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="33dp"
-                            android:gravity="center"
-                            android:text=""
-                            android:textColor="@color/white"
-                            android:textSize="18dp" />
 
 
                     </LinearLayout>
@@ -314,8 +306,8 @@
 
                         <TextView
                             android:id="@+id/coach3"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
+                            android:layout_width="178dp"
+                            android:layout_height="56dp"
                             android:gravity="bottom|center"
                             android:text="ahmed ben ahmed"
                             android:textColor="@color/colorPrimary"
@@ -567,16 +559,17 @@
         android:text="TextView"
         android:visibility="invisible"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.045"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="9dp"
-        tools:ignore="MissingConstraints" />
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteY="16dp" />
 
     <TextView
         android:id="@+id/Reservation"
         android:layout_width="79dp"
         android:layout_height="25dp"
         android:layout_marginBottom="14dp"
-        android:textColor="@color/colorPrimaryDark"
+        android:textColor="@color/grey"
         android:text="Resérvation"
         app:layout_constraintBottom_toTopOf="@+id/scroll"
         app:layout_constraintEnd_toEndOf="parent"
@@ -592,7 +585,8 @@
         android:src="@drawable/platinum_offre_back"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/scroll" />
+        app:layout_constraintTop_toBottomOf="@+id/scroll"
+        android:background="@drawable/editborder"/>
     <ImageView
         android:id="@+id/gold_offre"
         android:layout_width="200dp"
@@ -600,6 +594,7 @@
         android:src="@drawable/gold_offre_back"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/scroll" />
+        app:layout_constraintTop_toBottomOf="@+id/scroll"
+        android:background="@drawable/editborder"/>
 </androidx.constraintlayout.widget.ConstraintLayout>
 

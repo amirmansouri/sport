@@ -11,9 +11,11 @@
        android:layout_width="wrap_content"
        android:layout_height="wrap_content">
        <ImageView
+
            android:id="@+id/coach_image"
            android:layout_width="70dp"
            android:layout_height="70dp"
+           android:src="@drawable/logo4"
            android:layout_marginTop="51dp"
            android:layout_marginLeft="110dp"/>
    </LinearLayout>
@@ -68,6 +70,7 @@
             app:layout_constraintHorizontal_bias="0.164"
             app:layout_constraintStart_toEndOf="@+id/imageView"
             app:layout_constraintTop_toTopOf="parent"
+            android:text="msaken"
             app:layout_constraintVertical_bias="0.704" />
 
         <LinearLayout
