@@ -9,6 +9,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import com.example.test_sport.MySliderImageAdapter
 import com.example.test_sport.R
@@ -40,6 +41,7 @@ class HomeFragment() : Fragment() {
         auth = FirebaseAuth.getInstance()
         database = FirebaseDatabase.getInstance()
         databaseReference = database.reference.child("user")
+        (activity as AppCompatActivity?)!!.supportActionBar!!.hide()
         repeat(3) { index ->
             Handler().postDelayed(Runnable { motivText() }, 1000)
         }

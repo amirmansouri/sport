@@ -8,6 +8,7 @@ import android.view.View
 import android.view.View.GONE
 import android.view.ViewGroup
 import android.widget.ImageView
+import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.isInvisible
 import androidx.fragment.app.Fragment
 import com.example.test_sport.Login
@@ -36,6 +37,7 @@ class ProfileFragment : Fragment() {
         auth = FirebaseAuth.getInstance()
         database = FirebaseDatabase.getInstance()
         databaseReference = database.reference.child("user")
+        (activity as AppCompatActivity?)!!.supportActionBar!!.hide()
 /******/
 
 showHide(view)

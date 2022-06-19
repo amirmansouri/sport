@@ -17,7 +17,7 @@
             android:name=".splash.splash2"
             android:exported="false" />
         <activity
-            android:name=".splash.splash1"
+            android:name=".Login"
             android:exported="false" />
         <activity
             android:name=".reg2"
@@ -26,10 +26,10 @@
             android:name=".Register"
             android:exported="false" />
         <activity
-            android:name=".Login"
+            android:name=".MainActivity"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".splash.splash1"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

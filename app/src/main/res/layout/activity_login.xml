@@ -176,11 +176,13 @@
             android:orientation="horizontal">
 
             <ImageView
+                android:id="@+id/facebook"
                 android:layout_width="26.7dp"
                 android:layout_height="26.7dp"
                 android:src="@drawable/fb" />
 
             <ImageView
+                android:id="@+id/instagram"
                 android:layout_width="26.7dp"
                 android:layout_height="26.7dp"
                 android:layout_marginLeft="20dp"

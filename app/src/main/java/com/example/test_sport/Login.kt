@@ -1,9 +1,11 @@
 package com.example.test_sport
 
+import Fragment.HomeFragment
 import android.annotation.SuppressLint
 import android.content.Context
 import android.content.Intent
 import android.content.res.Configuration
+import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.TextUtils
@@ -21,13 +23,23 @@ import kotlinx.android.synthetic.main.custom_view_register.*
 import java.util.*
 
 class Login : AppCompatActivity() {
+
     // private val mAuth = FirebaseAuth.getInstance()
     var auth = FirebaseAuth.getInstance()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
+        if (FirebaseAuth.getInstance().currentUser!= null){
+            val intent = Intent(this,MainActivity::class.java)
+            startActivity(intent)
+        }
         supportActionBar?.hide()
-
+facebook.setOnClickListener {
+    facebook_link()
+}
+        instagram.setOnClickListener {
+            instagram_link()
+        }
 //
 //        val imageSlider = findViewById<SliderView>(R.id.imageSlider)
 //        val imageList: ArrayList<String> = ArrayList()
@@ -94,6 +106,19 @@ nouveau_abonne.setOnClickListener {
         }
     }
 
+    private fun instagram_link() {
+            val url = "https://www.instagram.com/mansouri___amir/?hl=fr"
+            val intent = Intent(Intent.ACTION_VIEW, Uri.parse(url))
+            this.startActivity(intent)
+
+    }
+
+    private fun facebook_link() {
+            val url = "https://www.facebook.com/yesyesyesyes.y/"
+            val intent = Intent(Intent.ACTION_VIEW, Uri.parse(url))
+            this.startActivity(intent)
+
+    }
 
 
     private fun setImageInSlider(images: ArrayList<String>, imageSlider: SliderView) {
@@ -141,11 +166,10 @@ nouveau_abonne.setOnClickListener {
         editor.apply()
     }
 //    override fun onResume() {
-//
 //        auth = FirebaseAuth.getInstance()
 //        val currentUser = auth.currentUser
 //        if(currentUser != null){
-//            val i = Intent(this,homeActivity::class.java)
+//            val i = Intent(this,MainActivity::class.java)
 //            startActivity(i)
 //        }
 //        super.onResume()
